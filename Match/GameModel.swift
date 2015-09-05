@@ -9,5 +9,12 @@
 import UIKit
 
 class GameModel: NSObject {
-   
+    func getCards () -> [Card] {
+        var generatedCards:[Card] = [Card]()
+        
+        // TODO: Generate card objects 
+        // TODO: Place card objects into array
+        
+        return generatedCards
+    }
 }
