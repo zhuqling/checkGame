@@ -88,6 +88,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="Nmp-WY-Lr1" id="zKz-ZK-4ua"/>
+                        <outlet property="scrollView" destination="PG5-6s-OPI" id="22N-zd-DRd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

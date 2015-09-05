@@ -14,7 +14,7 @@
 		36E479861B9B05CD00366122 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E479841B9B05CD00366122 /* LaunchScreen.xib */; };
 		36E479921B9B05CD00366122 /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E479911B9B05CD00366122 /* MatchTests.swift */; };
 		36E4799C1B9B07F400366122 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E4799B1B9B07F400366122 /* Card.swift */; };
-		36E4799E1B9B085200366122 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E4799D1B9B085200366122 /* GameModel.swift */; };
+		36E479A01B9B191800366122 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E4799F1B9B191800366122 /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		36E479901B9B05CD00366122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36E479911B9B05CD00366122 /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
 		36E4799B1B9B07F400366122 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		36E4799D1B9B085200366122 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameModel.swift; path = ../GameModel.swift; sourceTree = "<group>"; };
+		36E4799F1B9B191800366122 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 				36E4797B1B9B05CD00366122 /* AppDelegate.swift */,
 				36E4797D1B9B05CD00366122 /* ViewController.swift */,
 				36E4799B1B9B07F400366122 /* Card.swift */,
-				36E4799D1B9B085200366122 /* GameModel.swift */,
+				36E4799F1B9B191800366122 /* GameModel.swift */,
 				36E4797F1B9B05CD00366122 /* Main.storyboard */,
 				36E479821B9B05CD00366122 /* Images.xcassets */,
 				36E479841B9B05CD00366122 /* LaunchScreen.xib */,
@@ -219,7 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36E4797E1B9B05CD00366122 /* ViewController.swift in Sources */,
-				36E4799E1B9B085200366122 /* GameModel.swift in Sources */,
+				36E479A01B9B191800366122 /* GameModel.swift in Sources */,
 				36E4799C1B9B07F400366122 /* Card.swift in Sources */,
 				36E4797C1B9B05CD00366122 /* AppDelegate.swift in Sources */,
 			);
