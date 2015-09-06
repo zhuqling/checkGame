@@ -21,7 +21,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nmp-WY-Lr1" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <variation key="heightClass=compact" ambiguous="YES">
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                         </variation>
                                     </view>
@@ -32,6 +32,7 @@
                                     <constraint firstItem="Nmp-WY-Lr1" firstAttribute="top" secondItem="PG5-6s-OPI" secondAttribute="top" id="LJU-Mw-M6F"/>
                                     <constraint firstItem="Nmp-WY-Lr1" firstAttribute="leading" secondItem="PG5-6s-OPI" secondAttribute="leading" id="TvC-PE-4qc"/>
                                     <constraint firstAttribute="trailing" secondItem="Nmp-WY-Lr1" secondAttribute="trailing" id="VHh-xB-pdT"/>
+                                    <constraint firstAttribute="width" secondItem="Nmp-WY-Lr1" secondAttribute="width" id="f8j-0c-3r4"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -43,6 +44,7 @@
                                         <exclude reference="LJU-Mw-M6F"/>
                                         <exclude reference="TvC-PE-4qc"/>
                                         <exclude reference="VHh-xB-pdT"/>
+                                        <exclude reference="f8j-0c-3r4"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
@@ -56,6 +58,7 @@
                                         <include reference="LJU-Mw-M6F"/>
                                         <include reference="TvC-PE-4qc"/>
                                         <include reference="VHh-xB-pdT"/>
+                                        <include reference="f8j-0c-3r4"/>
                                     </mask>
                                 </variation>
                             </scrollView>

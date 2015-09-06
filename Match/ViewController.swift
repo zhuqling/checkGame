@@ -45,6 +45,9 @@ class ViewController: UIViewController {
             tempCard.setTranslatesAutoresizingMaskIntoConstraints(false)
             self.contentView.addSubview(tempCard)
             
+            // Handles tap gesture
+            var tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer (target: self, action: Selector("cardTapped:"))
+            tempCard.addGestureRecognizer(tapGestureRecognizer)
             
             // Set the height and width constraints
             var heightConstraint:NSLayoutConstraint = NSLayoutConstraint(item: tempCard, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 170)
@@ -103,6 +106,9 @@ class ViewController: UIViewController {
         self.contentView.addConstraint(contentViewHeightConstraint)
     } // End layoutCards()
 
-
+    func cardTapped(recognizer:UITapGestureRecognizer) {
+        var cardThatWasTapped:Card = recognizer.view as! Card
+        cardThatWasTapped.flipUp()
+    }
 }
 

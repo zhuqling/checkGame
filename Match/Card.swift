@@ -19,6 +19,7 @@ class Card: UIView {
         // TODO: Set default image for imageview
         cardImageView.image = UIImage(named: "back")
         
+        
         self.cardImageView.setTranslatesAutoresizingMaskIntoConstraints(false)
         
         self.addSubview (self.cardImageView)
@@ -39,6 +40,10 @@ class Card: UIView {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
         // No need to fill: not making cards from the storyboard
+    }
+    
+    func flipUp() {
+        self.cardImageView.image = UIImage(named: self.cardNames[self.cardValue])
     }
     
     /*
