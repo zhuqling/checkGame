@@ -17,10 +17,23 @@ class Card: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         // TODO: Set default image for imageview
-        self.backgroundColor = UIColor.redColor()
+        cardImageView.image = UIImage(named: "back")
         
-        // TODO: Add imageview for the view
+        self.cardImageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        self.addSubview (self.cardImageView)
+        
         // TODO: Set constraints for the imageview
+        var heightConstraint:NSLayoutConstraint = NSLayoutConstraint(item: self.cardImageView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 170)
+        
+        var widthConstraint:NSLayoutConstraint = NSLayoutConstraint(item: self.cardImageView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 120)
+        
+        var verticalConstraint:NSLayoutConstraint = NSLayoutConstraint(item: self.cardImageView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
+        
+        var horizontalConstraint:NSLayoutConstraint = NSLayoutConstraint(item: self.cardImageView, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0)
+        
+        self.cardImageView.addConstraints([heightConstraint, widthConstraint])
+        self.addConstraints([verticalConstraint, horizontalConstraint])
     }
 
     required init(coder aDecoder: NSCoder) {

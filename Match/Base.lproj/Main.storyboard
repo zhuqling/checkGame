@@ -21,13 +21,11 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nmp-WY-Lr1" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <color key="backgroundColor" red="1" green="0.47113011847438957" blue="0.40339524568981089" alpha="1" colorSpace="calibratedRGB"/>
                                         <variation key="heightClass=compact" ambiguous="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.6985274727422075" blue="0.17272597912131915" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Nmp-WY-Lr1" secondAttribute="bottom" id="2y7-JX-NRa"/>
                                     <constraint firstAttribute="width" constant="510" id="4pP-pf-veM"/>
