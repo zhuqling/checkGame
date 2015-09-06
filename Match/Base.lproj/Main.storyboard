@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="L5x-wF-btI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PG5-6s-OPI">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
@@ -65,28 +69,54 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="L5x-wF-btI" secondAttribute="bottom" id="0Bc-9M-Wom"/>
                             <constraint firstItem="PG5-6s-OPI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="3Y6-O9-ZOr"/>
                             <constraint firstAttribute="centerX" secondItem="PG5-6s-OPI" secondAttribute="centerX" id="Edo-pM-sdg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="L5x-wF-btI" secondAttribute="bottom" id="GP9-sw-tbM"/>
+                            <constraint firstItem="L5x-wF-btI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="I5P-uT-KxR"/>
+                            <constraint firstAttribute="trailing" secondItem="L5x-wF-btI" secondAttribute="trailing" id="YT3-aI-bfF"/>
+                            <constraint firstItem="L5x-wF-btI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cbS-aQ-ngW"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PG5-6s-OPI" secondAttribute="bottom" id="eF1-SK-YdJ"/>
+                            <constraint firstItem="L5x-wF-btI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="hjD-uV-ctu"/>
+                            <constraint firstItem="L5x-wF-btI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="kUy-Ey-OC3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L5x-wF-btI" secondAttribute="trailing" id="rDf-kg-0q6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="L5x-wF-btI"/>
                                 <exclude reference="PG5-6s-OPI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="eF1-SK-YdJ"/>
                                 <exclude reference="3Y6-O9-ZOr"/>
                                 <exclude reference="Edo-pM-sdg"/>
+                                <exclude reference="0Bc-9M-Wom"/>
+                                <exclude reference="GP9-sw-tbM"/>
+                                <exclude reference="I5P-uT-KxR"/>
+                                <exclude reference="YT3-aI-bfF"/>
+                                <exclude reference="cbS-aQ-ngW"/>
+                                <exclude reference="hjD-uV-ctu"/>
+                                <exclude reference="kUy-Ey-OC3"/>
+                                <exclude reference="rDf-kg-0q6"/>
+                                <exclude reference="eF1-SK-YdJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="subviews">
+                                <include reference="L5x-wF-btI"/>
                                 <include reference="PG5-6s-OPI"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="eF1-SK-YdJ"/>
                                 <include reference="3Y6-O9-ZOr"/>
                                 <include reference="Edo-pM-sdg"/>
+                                <include reference="0Bc-9M-Wom"/>
+                                <include reference="GP9-sw-tbM"/>
+                                <include reference="I5P-uT-KxR"/>
+                                <include reference="YT3-aI-bfF"/>
+                                <include reference="cbS-aQ-ngW"/>
+                                <include reference="hjD-uV-ctu"/>
+                                <include reference="kUy-Ey-OC3"/>
+                                <include reference="rDf-kg-0q6"/>
+                                <include reference="eF1-SK-YdJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -99,4 +129,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="newbackground" width="667" height="622"/>
+    </resources>
 </document>

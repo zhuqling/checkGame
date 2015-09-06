@@ -86,7 +86,7 @@ class ViewController: UIViewController {
                 
             } else {
                 // Card is in the first row
-                var topMarginConstraint:NSLayoutConstraint = NSLayoutConstraint(item: tempCard, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.contentView, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
+                var topMarginConstraint:NSLayoutConstraint = NSLayoutConstraint(item: tempCard, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.contentView, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 10)
                 
                 self.contentView.addConstraint(topMarginConstraint)
                 
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
         } // End For Loop
         
         // Add height constraint to the content view so scrollview knows how much to scroll
-        var contentViewHeightConstraint:NSLayoutConstraint = NSLayoutConstraint (item: self.contentView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.cards[0], attribute: NSLayoutAttribute.Height, multiplier: 4, constant: 15)
+        var contentViewHeightConstraint:NSLayoutConstraint = NSLayoutConstraint (item: self.contentView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.cards[0], attribute: NSLayoutAttribute.Height, multiplier: 4, constant: 35)
         
         self.contentView.addConstraint(contentViewHeightConstraint)
     } // End layoutCards()
