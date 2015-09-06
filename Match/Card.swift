@@ -17,12 +17,15 @@ class Card: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         // TODO: Set default image for imageview
+        self.backgroundColor = UIColor.redColor()
+        
         // TODO: Add imageview for the view
         // TODO: Set constraints for the imageview
     }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+        // No need to fill: not making cards from the storyboard
     }
     
     /*

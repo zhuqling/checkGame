@@ -21,15 +21,16 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nmp-WY-Lr1" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.47113011847438957" blue="0.40339524568981089" alpha="1" colorSpace="calibratedRGB"/>
                                         <variation key="heightClass=compact" ambiguous="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                         </variation>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="1" green="0.6985274727422075" blue="0.17272597912131915" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Nmp-WY-Lr1" secondAttribute="bottom" id="2y7-JX-NRa"/>
-                                    <constraint firstAttribute="width" constant="600" id="4pP-pf-veM"/>
+                                    <constraint firstAttribute="width" constant="510" id="4pP-pf-veM"/>
                                     <constraint firstItem="Nmp-WY-Lr1" firstAttribute="top" secondItem="PG5-6s-OPI" secondAttribute="top" id="LJU-Mw-M6F"/>
                                     <constraint firstItem="Nmp-WY-Lr1" firstAttribute="leading" secondItem="PG5-6s-OPI" secondAttribute="leading" id="TvC-PE-4qc"/>
                                     <constraint firstAttribute="trailing" secondItem="Nmp-WY-Lr1" secondAttribute="trailing" id="VHh-xB-pdT"/>
@@ -46,7 +47,7 @@
                                         <exclude reference="VHh-xB-pdT"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact" ambiguous="YES">
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                                     <mask key="subviews">
                                         <include reference="Nmp-WY-Lr1"/>
@@ -72,9 +73,9 @@
                                 <exclude reference="PG5-6s-OPI"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="eF1-SK-YdJ"/>
                                 <exclude reference="3Y6-O9-ZOr"/>
                                 <exclude reference="Edo-pM-sdg"/>
-                                <exclude reference="eF1-SK-YdJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -82,9 +83,9 @@
                                 <include reference="PG5-6s-OPI"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="eF1-SK-YdJ"/>
                                 <include reference="3Y6-O9-ZOr"/>
                                 <include reference="Edo-pM-sdg"/>
-                                <include reference="eF1-SK-YdJ"/>
                             </mask>
                         </variation>
                     </view>

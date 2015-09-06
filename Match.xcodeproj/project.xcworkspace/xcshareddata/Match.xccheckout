@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>09ECB991-7EBE-4FC8-B0BF-0BB17FA2D28A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Match</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>370FE09F2429174812562B14A10C8D01D1C99664</key>
 		<string>https://github.com/diezcami/match.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Match.xcodeproj/project.xcworkspace</string>
+	<string>Match.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>370FE09F2429174812562B14A10C8D01D1C99664</key>
