@@ -11,10 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var contentView: UIView! // Safely assume the variable has a value associated to it
     
     var gameModel: GameModel = GameModel()
     var cards:[Card] = [Card]()
+    var revealedCard:Card? // Containing a value is optional/can be null?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,8 +108,36 @@ class ViewController: UIViewController {
     } // End layoutCards()
 
     func cardTapped(recognizer:UITapGestureRecognizer) {
+        //
         var cardThatWasTapped:Card = recognizer.view as! Card
-        cardThatWasTapped.flipUp()
+        
+        if (!cardThatWasTapped.isFlipped) {
+            if (self.revealedCard == nil) { // First Card
+                // Flip down all cards
+                self.flipDownAllCards()
+                // Flip card up
+                cardThatWasTapped.flipUp()
+                self.revealedCard = cardThatWasTapped
+                
+            } else { // Second Card
+                // Flip card up
+                cardThatWasTapped.flipUp()
+                if (revealedCard?.cardValue == cardThatWasTapped.cardValue) { // Cards are the same
+                    // Hide both cards
+                    self.revealedCard?.hideCard()
+                    cardThatWasTapped.hideCard()
+                } // else do nothing
+                self.revealedCard = nil
+            }
+        } // If it's flipped, do nothing
+    }
+    
+    func flipDownAllCards () {
+        for card in self.cards {
+            if (!card.isDone) {
+                card.flipDown()
+            }
+        }
     }
 }
 
