@@ -72,8 +72,6 @@ class ViewController: UIViewController {
                 
                 // Add constraint
                 self.contentView.addConstraint(leftMarginConstraint)
-                
-                
             }
             
             // Set the vertical position
@@ -117,16 +115,20 @@ class ViewController: UIViewController {
                 self.flipDownAllCards()
                 // Flip card up
                 cardThatWasTapped.flipUp()
+                // Add first card
                 self.revealedCard = cardThatWasTapped
-                
             } else { // Second Card
                 // Flip card up
                 cardThatWasTapped.flipUp()
+                
+                // Check for matching card values
                 if (revealedCard?.cardValue == cardThatWasTapped.cardValue) { // Cards are the same
                     // Hide both cards
                     self.revealedCard?.hideCard()
                     cardThatWasTapped.hideCard()
                 } // else do nothing
+                
+                // Set revealed card back to null
                 self.revealedCard = nil
             }
         } // If it's flipped, do nothing
