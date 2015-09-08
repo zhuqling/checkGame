@@ -12,10 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView! // Safely assume the variable has a value associated to it
+    @IBOutlet weak var countdownLabel: UILabel!
     
     var gameModel: GameModel = GameModel()
     var cards:[Card] = [Card]()
     var revealedCard:Card? // Containing a value is optional/can be null?
+    var timer:NSTimer!
+    var countdown:Int = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +29,39 @@ class ViewController: UIViewController {
         
         // Layout
         self.layoutCards()
+        
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("timerUpdate"), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func timerUpdate() {
+        self.countdown -= 1
+        self.countdownLabel.text = String(countdown)
+        
+        if (self.countdown == 0) {
+            // Stop the timer
+            
+            self.timer.invalidate()
+            
+            var allCardsMatched:Bool = true
+            for card in cards {
+                if (!card.isDone) {
+                    allCardsMatched = false
+                    break
+                }
+            }
+            
+            if (allCardsMatched) { // Win
+                
+            } else { // Lose
+                
+            }
+        }
+        
     }
     
     func layoutCards() {
@@ -108,6 +139,10 @@ class ViewController: UIViewController {
     func cardTapped(recognizer:UITapGestureRecognizer) {
         //
         var cardThatWasTapped:Card = recognizer.view as! Card
+        
+        if (self.countdown == 0) {
+            return
+        }
         
         if (!cardThatWasTapped.isFlipped) {
             if (self.revealedCard == nil) { // First Card

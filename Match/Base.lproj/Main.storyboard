@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -29,11 +30,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                         </variation>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfc-Dy-FYo">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Nmp-WY-Lr1" secondAttribute="bottom" id="2y7-JX-NRa"/>
                                     <constraint firstAttribute="width" constant="510" id="4pP-pf-veM"/>
+                                    <constraint firstItem="cfc-Dy-FYo" firstAttribute="top" secondItem="PG5-6s-OPI" secondAttribute="top" constant="5" id="Cd2-fL-qvy"/>
                                     <constraint firstItem="Nmp-WY-Lr1" firstAttribute="top" secondItem="PG5-6s-OPI" secondAttribute="top" id="LJU-Mw-M6F"/>
+                                    <constraint firstItem="cfc-Dy-FYo" firstAttribute="leading" secondItem="PG5-6s-OPI" secondAttribute="leading" constant="5" id="Rc8-di-kXI"/>
                                     <constraint firstItem="Nmp-WY-Lr1" firstAttribute="leading" secondItem="PG5-6s-OPI" secondAttribute="leading" id="TvC-PE-4qc"/>
                                     <constraint firstAttribute="trailing" secondItem="Nmp-WY-Lr1" secondAttribute="trailing" id="VHh-xB-pdT"/>
                                     <constraint firstAttribute="width" secondItem="Nmp-WY-Lr1" secondAttribute="width" id="f8j-0c-3r4"/>
@@ -41,6 +50,7 @@
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="Nmp-WY-Lr1"/>
+                                        <exclude reference="cfc-Dy-FYo"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="4pP-pf-veM"/>
@@ -49,12 +59,15 @@
                                         <exclude reference="TvC-PE-4qc"/>
                                         <exclude reference="VHh-xB-pdT"/>
                                         <exclude reference="f8j-0c-3r4"/>
+                                        <exclude reference="Cd2-fL-qvy"/>
+                                        <exclude reference="Rc8-di-kXI"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                                     <mask key="subviews">
                                         <include reference="Nmp-WY-Lr1"/>
+                                        <include reference="cfc-Dy-FYo"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="4pP-pf-veM"/>
@@ -63,6 +76,8 @@
                                         <include reference="TvC-PE-4qc"/>
                                         <include reference="VHh-xB-pdT"/>
                                         <include reference="f8j-0c-3r4"/>
+                                        <include reference="Cd2-fL-qvy"/>
+                                        <include reference="Rc8-di-kXI"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -87,8 +102,7 @@
                                 <exclude reference="PG5-6s-OPI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3Y6-O9-ZOr"/>
-                                <exclude reference="Edo-pM-sdg"/>
+                                <exclude reference="eF1-SK-YdJ"/>
                                 <exclude reference="0Bc-9M-Wom"/>
                                 <exclude reference="GP9-sw-tbM"/>
                                 <exclude reference="I5P-uT-KxR"/>
@@ -97,7 +111,8 @@
                                 <exclude reference="hjD-uV-ctu"/>
                                 <exclude reference="kUy-Ey-OC3"/>
                                 <exclude reference="rDf-kg-0q6"/>
-                                <exclude reference="eF1-SK-YdJ"/>
+                                <exclude reference="3Y6-O9-ZOr"/>
+                                <exclude reference="Edo-pM-sdg"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -106,8 +121,7 @@
                                 <include reference="PG5-6s-OPI"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3Y6-O9-ZOr"/>
-                                <include reference="Edo-pM-sdg"/>
+                                <include reference="eF1-SK-YdJ"/>
                                 <include reference="0Bc-9M-Wom"/>
                                 <include reference="GP9-sw-tbM"/>
                                 <include reference="I5P-uT-KxR"/>
@@ -116,12 +130,14 @@
                                 <include reference="hjD-uV-ctu"/>
                                 <include reference="kUy-Ey-OC3"/>
                                 <include reference="rDf-kg-0q6"/>
-                                <include reference="eF1-SK-YdJ"/>
+                                <include reference="3Y6-O9-ZOr"/>
+                                <include reference="Edo-pM-sdg"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="Nmp-WY-Lr1" id="zKz-ZK-4ua"/>
+                        <outlet property="countdownLabel" destination="cfc-Dy-FYo" id="GCN-9u-6lz"/>
                         <outlet property="scrollView" destination="PG5-6s-OPI" id="22N-zd-DRd"/>
                     </connections>
                 </viewController>
