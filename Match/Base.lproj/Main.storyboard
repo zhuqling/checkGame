@@ -54,13 +54,13 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="4pP-pf-veM"/>
+                                        <exclude reference="Cd2-fL-qvy"/>
+                                        <exclude reference="Rc8-di-kXI"/>
                                         <exclude reference="2y7-JX-NRa"/>
                                         <exclude reference="LJU-Mw-M6F"/>
                                         <exclude reference="TvC-PE-4qc"/>
                                         <exclude reference="VHh-xB-pdT"/>
                                         <exclude reference="f8j-0c-3r4"/>
-                                        <exclude reference="Cd2-fL-qvy"/>
-                                        <exclude reference="Rc8-di-kXI"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
@@ -71,13 +71,13 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="4pP-pf-veM"/>
+                                        <include reference="Cd2-fL-qvy"/>
+                                        <include reference="Rc8-di-kXI"/>
                                         <include reference="2y7-JX-NRa"/>
                                         <include reference="LJU-Mw-M6F"/>
                                         <include reference="TvC-PE-4qc"/>
                                         <include reference="VHh-xB-pdT"/>
                                         <include reference="f8j-0c-3r4"/>
-                                        <include reference="Cd2-fL-qvy"/>
-                                        <include reference="Rc8-di-kXI"/>
                                     </mask>
                                 </variation>
                             </scrollView>

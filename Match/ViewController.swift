@@ -55,11 +55,17 @@ class ViewController: UIViewController {
                 }
             }
             
+            var alertText:String = ""
             if (allCardsMatched) { // Win
+                alertText = "Win!"
                 
             } else { // Lose
-                
+                alertText = "Lose"
             }
+            
+            var alert:UIAlertController = UIAlertController(title: "Time's Up!", message: alertText, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
         
     }
