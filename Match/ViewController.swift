@@ -30,7 +30,6 @@ class ViewController: UIViewController {
     var flipSoundPlayer:AVAudioPlayer?
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -99,6 +98,8 @@ class ViewController: UIViewController {
             } else { // Lose
                 alertText = "Lose"
             }
+            
+            
             
             var alert:UIAlertController = UIAlertController(title: "Time's Up!", message: alertText, preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
@@ -189,8 +190,6 @@ class ViewController: UIViewController {
         
         if (!cardThatWasTapped.isFlipped) {
             if (self.revealedCard == nil) { // First Card
-                // Flip down all cards
-                self.flipDownAllCards()
                 // Flip card up
                 cardThatWasTapped.flipUp()
                 // Add first card
@@ -218,20 +217,17 @@ class ViewController: UIViewController {
                     if self.wrongSoundPlayer != nil {
                         self.wrongSoundPlayer?.play()
                     }
+                    
+                    var timer1 = NSTimer.scheduledTimerWithTimeInterval(1, target: self.revealedCard!, selector: Selector("flipDown"), userInfo: nil, repeats: false)
+                    
+                    var timer2 = NSTimer.scheduledTimerWithTimeInterval(1, target: cardThatWasTapped, selector: Selector("flipDown"), userInfo: nil, repeats: false)
+
                 }
                 
                 // Set revealed card back to null
                 self.revealedCard = nil
             }
         } // If it's flipped, do nothing
-    }
-    
-    func flipDownAllCards () {
-        for card in self.cards {
-            if (!card.isDone) {
-                card.flipDown()
-            }
-        }
     }
 }
 
