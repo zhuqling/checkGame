@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3631F07B1BA41D2300812FD4 /* cardflip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3631F0771BA41D2300812FD4 /* cardflip.wav */; };
+		3631F07C1BA41D2300812FD4 /* dingcorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3631F0781BA41D2300812FD4 /* dingcorrect.wav */; };
+		3631F07D1BA41D2300812FD4 /* dingwrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3631F0791BA41D2300812FD4 /* dingwrong.wav */; };
+		3631F07E1BA41D2300812FD4 /* shuffle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3631F07A1BA41D2300812FD4 /* shuffle.wav */; };
+		3631F0801BA41D6900812FD4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3631F07F1BA41D6900812FD4 /* AVFoundation.framework */; };
 		36E4797C1B9B05CD00366122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E4797B1B9B05CD00366122 /* AppDelegate.swift */; };
 		36E4797E1B9B05CD00366122 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E4797D1B9B05CD00366122 /* ViewController.swift */; };
 		36E479811B9B05CD00366122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E4797F1B9B05CD00366122 /* Main.storyboard */; };
@@ -28,6 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3631F0771BA41D2300812FD4 /* cardflip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cardflip.wav; sourceTree = "<group>"; };
+		3631F0781BA41D2300812FD4 /* dingcorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingcorrect.wav; sourceTree = "<group>"; };
+		3631F0791BA41D2300812FD4 /* dingwrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingwrong.wav; sourceTree = "<group>"; };
+		3631F07A1BA41D2300812FD4 /* shuffle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shuffle.wav; sourceTree = "<group>"; };
+		3631F07F1BA41D6900812FD4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		36E479761B9B05CD00366122 /* Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Match.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E4797A1B9B05CD00366122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36E4797B1B9B05CD00366122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3631F0801BA41D6900812FD4 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +74,7 @@
 		36E4796D1B9B05CD00366122 = {
 			isa = PBXGroup;
 			children = (
+				3631F07F1BA41D6900812FD4 /* AVFoundation.framework */,
 				36E479781B9B05CD00366122 /* Match */,
 				36E4798E1B9B05CD00366122 /* MatchTests */,
 				36E479771B9B05CD00366122 /* Products */,
@@ -96,6 +108,10 @@
 		36E479791B9B05CD00366122 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3631F0771BA41D2300812FD4 /* cardflip.wav */,
+				3631F0781BA41D2300812FD4 /* dingcorrect.wav */,
+				3631F0791BA41D2300812FD4 /* dingwrong.wav */,
+				3631F07A1BA41D2300812FD4 /* shuffle.wav */,
 				36E4797A1B9B05CD00366122 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -199,6 +215,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				36E479811B9B05CD00366122 /* Main.storyboard in Resources */,
+				3631F07C1BA41D2300812FD4 /* dingcorrect.wav in Resources */,
+				3631F07D1BA41D2300812FD4 /* dingwrong.wav in Resources */,
+				3631F07E1BA41D2300812FD4 /* shuffle.wav in Resources */,
+				3631F07B1BA41D2300812FD4 /* cardflip.wav in Resources */,
 				36E479861B9B05CD00366122 /* LaunchScreen.xib in Resources */,
 				36E479831B9B05CD00366122 /* Images.xcassets in Resources */,
 			);
@@ -417,6 +437,7 @@
 				36E479971B9B05CD00366122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36E479981B9B05CD00366122 /* Build configuration list for PBXNativeTarget "MatchTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +446,7 @@
 				36E4799A1B9B05CD00366122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -16,9 +17,19 @@ class ViewController: UIViewController {
     
     var gameModel: GameModel = GameModel()
     var cards:[Card] = [Card]()
+    
+    // Timer Properties
     var revealedCard:Card? // Containing a value is optional/can be null?
     var timer:NSTimer!
     var countdown:Int = 20
+    
+    // Audio Player Properties
+    var correctSoundPlayer:AVAudioPlayer?
+    var wrongSoundPlayer:AVAudioPlayer?
+    var shuffleSoundPlayer:AVAudioPlayer?
+    var flipSoundPlayer:AVAudioPlayer?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +41,32 @@ class ViewController: UIViewController {
         // Layout
         self.layoutCards()
         
+        // Sounds
+        var correctSoundUrl:NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("dingcorrect", ofType: "wav")!)
+        if correctSoundUrl != nil {
+            self.correctSoundPlayer = AVAudioPlayer(contentsOfURL: correctSoundUrl!, error: nil)
+        }
+        
+        var wrongSoundUrl:NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("dingwrong", ofType: "wav")!)
+        if wrongSoundUrl != nil {
+            self.wrongSoundPlayer = AVAudioPlayer(contentsOfURL: wrongSoundUrl!, error: nil)
+        }
+        
+        var shuffleSoundUrl:NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("shuffle", ofType: "wav")!)
+        if shuffleSoundUrl != nil {
+            self.shuffleSoundPlayer = AVAudioPlayer(contentsOfURL: shuffleSoundUrl!, error: nil)
+        }
+        
+        var flipSoundUrl:NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cardflip", ofType: "wav")!)
+        if flipSoundUrl != nil {
+            self.flipSoundPlayer = AVAudioPlayer(contentsOfURL: flipSoundUrl!, error: nil)
+        }
+        
+        if self.shuffleSoundPlayer != nil {
+            self.shuffleSoundPlayer?.play()
+        }
+        
+        // Timer
         self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("timerUpdate"), userInfo: nil, repeats: true)
     }
 
@@ -158,6 +195,11 @@ class ViewController: UIViewController {
                 cardThatWasTapped.flipUp()
                 // Add first card
                 self.revealedCard = cardThatWasTapped
+
+                if self.flipSoundPlayer != nil {
+                    self.flipSoundPlayer?.play()
+                }
+                
             } else { // Second Card
                 // Flip card up
                 cardThatWasTapped.flipUp()
@@ -167,7 +209,16 @@ class ViewController: UIViewController {
                     // Hide both cards
                     self.revealedCard?.hideCard()
                     cardThatWasTapped.hideCard()
-                } // else do nothing
+                    
+                    if self.correctSoundPlayer != nil {
+                        self.correctSoundPlayer?.play()
+                    }
+                    
+                } else {
+                    if self.wrongSoundPlayer != nil {
+                        self.wrongSoundPlayer?.play()
+                    }
+                }
                 
                 // Set revealed card back to null
                 self.revealedCard = nil
