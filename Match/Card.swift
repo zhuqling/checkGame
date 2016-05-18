@@ -32,7 +32,8 @@ class Card: UIView {
     }
     
     func applyAutoLayoutConstraints (imageView:UIImageView) {
-        imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
         
         self.addSubview (imageView)
         

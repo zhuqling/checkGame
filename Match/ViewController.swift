@@ -43,22 +43,22 @@ class ViewController: UIViewController {
         // Sounds
         var correctSoundUrl:NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("dingcorrect", ofType: "wav")!)
         if correctSoundUrl != nil {
-            self.correctSoundPlayer = AVAudioPlayer(contentsOfURL: correctSoundUrl!, error: nil)
+            self.correctSoundPlayer = try! AVAudioPlayer(contentsOfURL: correctSoundUrl!, fileTypeHint: nil)
         }
         
         var wrongSoundUrl:NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("dingwrong", ofType: "wav")!)
         if wrongSoundUrl != nil {
-            self.wrongSoundPlayer = AVAudioPlayer(contentsOfURL: wrongSoundUrl!, error: nil)
+            self.wrongSoundPlayer = try! AVAudioPlayer(contentsOfURL: wrongSoundUrl!, fileTypeHint: nil)
         }
         
         var shuffleSoundUrl:NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("shuffle", ofType: "wav")!)
         if shuffleSoundUrl != nil {
-            self.shuffleSoundPlayer = AVAudioPlayer(contentsOfURL: shuffleSoundUrl!, error: nil)
+            self.shuffleSoundPlayer = try! AVAudioPlayer(contentsOfURL: shuffleSoundUrl!, fileTypeHint: nil)
         }
         
         var flipSoundUrl:NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cardflip", ofType: "wav")!)
         if flipSoundUrl != nil {
-            self.flipSoundPlayer = AVAudioPlayer(contentsOfURL: flipSoundUrl!, error: nil)
+            self.flipSoundPlayer = try! AVAudioPlayer(contentsOfURL: flipSoundUrl!, fileTypeHint: nil)
         }
         
         if self.shuffleSoundPlayer != nil {
@@ -118,7 +118,8 @@ class ViewController: UIViewController {
             
             // Place the card in the view and turn off translateautoresizemask
             var tempCard:Card = self.cards[index]
-            tempCard.setTranslatesAutoresizingMaskIntoConstraints(false)
+            tempCard.translatesAutoresizingMaskIntoConstraints = false
+//            tempCard.setTranslatesAutoresizingMaskIntoConstraints(false)
             self.contentView.addSubview(tempCard)
             
             // Handles tap gesture
